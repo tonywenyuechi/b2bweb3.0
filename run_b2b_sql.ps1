@@ -1,0 +1,2 @@
+# 直接执行B2B电池交易平台SQL脚本
+& "C:\Program Files\MySQL\MySQL Server 9.5\bin\mysql" -u root -p -e "CREATE DATABASE IF NOT EXISTS shopxo DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci; USE shopxo; SOURCE g:/b2bweb3.0d/b2b_standalone.sql;"

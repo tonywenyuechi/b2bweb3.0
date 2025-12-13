@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>产品中心 - 两（三）轮车电池web3.0交易平台</title>
+    <meta name="keywords" content="两（三）轮车电池,产品中心,锂电池,铅酸电池,磷酸铁锂电池" />
+    <meta name="description" content="两（三）轮车电池产品中心，提供各类高品质电池产品，包括锂电池、铅酸电池、磷酸铁锂电池等" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="产品中心">
+    <link rel="shortcut icon" type="image/x-icon" href="web3.0-20.ico" />
+    <link rel="apple-touch-icon" href="web3.0-20.png">
+    <link rel="apple-touch-icon-precomposed" href="web3.0-20.png">
+    
+    <!-- 引入外部样式库 -->
+    <link href="https://cdn.jsdelivr.net/npm/amazeui@2.7.2/dist/css/amazeui.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    
+    <!-- 引入自定义样式 -->
+    <link rel="stylesheet" type="text/css" href="css/common.css?v=1.0">
+    <link rel="stylesheet" type="text/css" href="css/products.css?v=1.0">
+    
+    <!-- 主题配色 -->
+    <style type="text/css">
+        :root {
+            --html-body-size: 10px;
+            --body-bg-color: #f7f7f7;
+            --color-price: #E22C08;
+            --color-red: #E22C08;
+            --color-yellow: #FAAD14;
+            --color-blue: #76AFFF;
+            --color-green: #5EB95E;
+            --color-main: #E22C08;
+            --color-main-light: #ffe3de;
+            --color-main-hover: #EA6B52;
+            --color-secondary: #FFB8AA;
+            --border-radius-sm: 0.2rem;
+            --border-radius: 0.4rem;
+            --border-radius-lg: 0.8rem;
+            --box-shadow: 0 5px 20px rgba(50,55,58,0.1);
+            --box-shadow-sm: 0 2px 8px rgba(50,55,58,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <div class="container">
+            <nav class="am-g am-g-collapse am-nav-collapse">
+                <div class="am-u-sm-12 am-u-md-2">
+                    <div class="logo">
+                        <a href="index.html"><img src="web3.0-20.png" alt="两（三）轮车电池web3.0交易平台" class="logo-img"></a>
+                    </div>
+                </div>
+                <div class="am-u-sm-12 am-u-md-10">
+                    <ul class="am-nav am-nav-pills am-nav-justify am-nav-horizontal am-show-sm-only">
+                        <li><a href="index.html">首页</a></li>
+                        <li class="am-active"><a href="products.html">产品中心</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="contact.html">联系方式</a></li>
+                        <li><a href="login.html" class="am-btn am-btn-primary">登录/注册</a></li>
+                    </ul>
+                    <ul class="am-nav am-nav-pills am-nav-justify am-nav-horizontal am-hide-sm-only">
+                        <li><a href="index.html">首页</a></li>
+                        <li class="am-dropdown am-active" data-am-dropdown>
+                            <a href="products.html" class="am-dropdown-toggle" data-am-dropdown-toggle>产品中心 <span class="am-icon-caret-down"></span></a>
+                            <ul class="am-dropdown-content">
+                                <li><a href="products.html?type=new">全新电池</a></li>
+                                <li><a href="products.html?type=used">二手电池</a></li>
+                                <li><a href="products.html?type=repair">维修服务</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="services.html">服务保障</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="contact.html">联系方式</a></li>
+                        <li class="nav-user">
+                            <a href="login.html" class="am-btn am-btn-primary">登录/注册</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="page-title">
+        <div class="container">
+            <h1>产品中心</h1>
+            <p>为您提供高品质的两（三）轮车电池产品</p>
+            <div class="am-breadcrumb">
+                <span><a href="index.html">首页</a></span>
+                <span class="am-breadcrumb-slash">/</span>
+                <span class="am-active">产品中心</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主要内容区域 -->
+    <main class="main">
+        <div class="container">
+            <div class="am-g">
+                <!-- 筛选侧边栏 -->
+                <div class="am-u-sm-12 am-u-md-3">
+                    <aside class="sidebar">
+                        <!-- 搜索框 -->
+                        <div class="search-box">
+                            <input type="text" class="search-input" placeholder="搜索产品...">
+                            <button class="search-btn"><i class="am-icon-search"></i></button>
+                        </div>
+                        
+                        <!-- 产品分类 -->
+                        <div class="filter-section">
+                            <h3 class="filter-title">产品分类</h3>
+                            <ul class="filter-list">
+                                <li class="filter-item active" data-filter="all">
+                                    <a href="#">全部产品</a>
+                                    <span class="filter-count">(120)</span>
+                                </li>
+                                <li class="filter-item" data-filter="lithium">
+                                    <a href="#">锂电池</a>
+                                    <span class="filter-count">(60)</span>
+                                </li>
+                                <li class="filter-item" data-filter="lead-acid">
+                                    <a href="#">铅酸电池</a>
+                                    <span class="filter-count">(30)</span>
+                                </li>
+                                <li class="filter-item" data-filter="lfp">
+                                    <a href="#">磷酸铁锂电池</a>
+                                    <span class="filter-count">(20)</span>
+                                </li>
+                                <li class="filter-item" data-filter="ternary">
+                                    <a href="#">三元锂电池</a>
+                                    <span class="filter-count">(10)</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- 电压筛选 -->
+                        <div class="filter-section">
+                            <h3 class="filter-title">电压规格</h3>
+                            <ul class="filter-list">
+                                <li class="filter-item">
+                                    <label class="am-checkbox">
+                                        <input type="checkbox" value="48v"> 48V
+                                    </label>
+                                </li>
+                                <li class="filter-item">
+                                    <label class="am-checkbox">
+                                        <input type="checkbox" value="60v"> 60V
+                                    </label>
+                                </li>
+                                <li class="filter-item">
+                                    <label class="am-checkbox">
+                                        <input type="checkbox" value="72v"> 72V
+                                    </label>
+                                </li>
+                                <li class="filter-item">
+                                    <label class="am-checkbox">
+                                        <input type="checkbox" value="other-voltage"> 其他电压
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- 容量筛选 -->
+                        <div class="filter-section">
+                            <h3 class="filter-title">电池容量</h3>
+                            <ul class="filter-list">
+                                <li class="filter-item">
+                                    <label class="am-checkbox">
+                                        <input type="checkbox" value="12ah"> 12Ah
+                                    </label>
+                                </li>
+                                <li class="filter-item">
+                                    <label class="am-checkbox">
+                                        <input type="checkbox" value="20ah"> 20Ah
+                                    </label>
+                                </li>
+                                <li class="filter-item">
+                                    <label class="am-checkbox">
+                                        <input type="checkbox" value="30ah"> 30Ah
+                                    </label>
+                                </li>
+                                <li class="filter-item">
+                                    <label class="am-checkbox">
+                                        <input type="checkbox" value="other-capacity"> 其他容量
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- 价格范围 -->
+                        <div class="filter-section">
+                            <h3 class="filter-title">价格范围</h3>
+                            <div class="price-range">
+                                <div class="price-inputs">
+                                    <input type="number" class="price-min" placeholder="最低价">
+                                    <span class="price-separator">-</span>
+                                    <input type="number" class="price-max" placeholder="最高价">
+                                </div>
+                                <button class="am-btn am-btn-primary price-filter-btn">筛选</button>
+                            </div>
+                        </div>
+                        
+                        <!-- 品牌筛选 -->
+                        <div class="filter-section">
+                            <h3 class="filter-title">品牌</h3>
+                            <ul class="filter-list">
+                                <li class="filter-item">
+                                    <label class="am-checkbox">
+                                        <input type="checkbox" value="brand1"> 盘古锂电
+                                    </label>
+                                </li>
+                                <li class="filter-item">
+                                    <label class="am-checkbox">
+                                        <input type="checkbox" value="brand2"> 天能电池
+                                    </label>
+                                </li>
+                                <li class="filter-item">
+                                    <label class="am-checkbox">
+                                        <input type="checkbox" value="brand3"> 超威电池
+                                    </label>
+                                </li>
+                                <li class="filter-item">
+                                    <label class="am-checkbox">
+                                        <input type="checkbox" value="brand4"> 其他品牌
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- 应用车型 -->
+                        <div class="filter-section">
+                            <h3 class="filter-title">应用车型</h3>
+                            <ul class="filter-list">
+                                <li class="filter-item">
+                                    <label class="am-checkbox">
+                                        <input type="checkbox" value="ebike"> 电动自行车
+                                    </label>
+                                </li>
+                                <li class="filter-item">
+                                    <label class="am-checkbox">
+                                        <input type="checkbox" value="scooter"> 电动摩托车
+                                    </label>
+                                </li>
+                                <li class="filter-item">
+                                    <label class="am-checkbox">
+                                        <input type="checkbox" value="tricycle"> 电动三轮车
+                                    </label>
+                                </li>
+                                <li class="filter-item">
+                                    <label class="am-checkbox">
+                                        <input type="checkbox" value="other-vehicle"> 其他车型
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- 重置筛选 -->
+                        <div class="filter-section">
+                            <button class="am-btn am-btn-default reset-filter-btn">重置筛选</button>
+                        </div>
+                    </aside>
+                </div>
+                
+                <!-- 产品列表 -->
+                <div class="am-u-sm-12 am-u-md-9">
+                    <div class="products-wrapper">
+                        <!-- 排序和视图切换 -->
+                        <div class="products-header">
+                            <div class="products-view">
+                                <button class="view-btn grid-view active" data-view="grid">
+                                    <i class="am-icon-th-large"></i>
+                                </button>
+                                <button class="view-btn list-view" data-view="list">
+                                    <i class="am-icon-list"></i>
+                                </button>
+                            </div>
+                            <div class="products-sort">
+                                <label>排序方式：</label>
+                                <select class="sort-select">
+                                    <option value="default">默认排序</option>
+                                    <option value="price-asc">价格从低到高</option>
+                                    <option value="price-desc">价格从高到低</option>
+                                    <option value="sales">销量优先</option>
+                                    <option value="newest">最新上架</option>
+                                    <option value="rating">评分最高</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- 产品标签 -->
+                        <div class="products-tags">
+                            <span class="tag active">全部产品</span>
+                            <span class="tag">热门推荐</span>
+                            <span class="tag">新品上市</span>
+                            <span class="tag">限时促销</span>
+                            <span class="tag">高性价比</span>
+                        </div>
+                        
+                        <!-- 产品列表 -->
+                        <div class="products-list">
+                            <!-- 产品项1 -->
+                            <div class="product-item" data-type="lithium" data-voltage="60v" data-capacity="20ah" data-price="1299">
+                                <div class="product-img">
+                                    <img src="web3.0-4.png" alt="60V20Ah锂电池组" class="am-img-responsive">
+                                    <span class="promotion-tag">热销</span>
+                                    <div class="product-actions">
+                                        <button class="quick-view" data-id="1"><i class="am-icon-eye"></i> 快速预览</button>
+                                        <button class="add-to-compare" data-id="1"><i class="am-icon-exchange"></i> 对比</button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-category">锂电池</div>
+                                    <h3 class="product-title"><a href="product-detail.html?id=1">60V20Ah锂电池组</a></h3>
+                                    <div class="product-specs">
+                                        <span class="spec">电压: 60V</span>
+                                        <span class="spec">容量: 20Ah</span>
+                                        <span class="spec">类型: 三元锂</span>
+                                    </div>
+                                    <div class="rating">
+                                        <i class="am-icon-star"></i>
+                                        <i class="am-icon-star"></i>
+                                        <i class="am-icon-star"></i>
+                                        <i class="am-icon-star"></i>
+                                        <i class="am-icon-star-half-o"></i>
+                                        <span class="rating-count">(128)</span>
+                                    </div>
+                                    <div class="product-meta">
+                                        <span class="sales">销量: 256</span>
+                                        <span class="stock">库存: 100</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price">¥1299</span>
+                                        <span class="original-price">¥1599</span>
+                                    </div>
+                                    <div class="product-buttons">
+                                        <button class="am-btn am-btn-primary add-to-cart" data-id="1">加入购物车</button>
+                                        <button class="am-btn am-btn-default buy-now" data-id="1">立即购买</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 产品项2 -->
+                            <div class="product-item" data-type="lead-acid" data-voltage="48v" data-capacity="12ah" data-price="599">
+                                <div class="product-img">
+                                    <img src="web3.0-5.png" alt="48V12Ah铅酸电池" class="am-img-responsive">
+                                    <div class="product-actions">
+                                        <button class="quick-view" data-id="2"><i class="am-icon-eye"></i> 快速预览</button>
+                                        <button class="add-to-compare" data-id="2"><i class="am-icon-exchange"></i> 对比</button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-category">铅酸电池</div>
+                                    <h3 class="product-title"><a href="product-detail.html?id=2">48V12Ah铅酸电池</a></h3>
+                                    <div class="product-specs">
+                                        <span class="spec">电压: 48V</span>
+                                        <span class="spec">容量: 12Ah</span>
+                                        <span class="spec">类型: 铅酸</span>
+                                    </div>
+                                    <div class="rating">
+                                        <i class="am-icon-star"></i>
+                                        <i class="am-icon-star"></i>
+                                        <i class="am-icon-star"></i>
+                                        <i class="am-icon-star"></i>
+                                        <i class="am-icon-star-o"></i>
+                                        <span class="rating-count">(96)</span>
+                                    </div>
+                                    <div class="product-meta">
+                                        <span class="sales">销量: 189</span>
+                                        <span class="stock">库存: 150</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price">¥599</span>
+                                        <span class="original-price">¥799</span>
+                                    </div>
+                                    <div class="product-buttons">
+                                        <button class="am-btn am-btn-primary add-to-cart" data-id="2">加入购物车</button>
+                                        <button class="am-btn am-btn-default buy-now" data-id="2">立即购买</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 产品项3 -->
+                            <div class="product-item" data-type="lfp" data-voltage="72v" data-capacity="30ah" data-price="2199">
+                                <div class="product-img">
+                                    <img src="web3.0-6.png" alt="72V30Ah磷酸铁锂电池" class="am-img-responsive">
+                                    <span class="promotion-tag">新品</span>
+                                    <div class="product-actions">
+                                        <button class="quick-view" data-id="3"><i class="am-icon-eye"></i> 快速预览</button>
+                                        <button class="add-to-compare" data-id="3"><i class="am-icon-exchange"></i> 对比</button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-category">磷酸铁锂电池</div>
+                                    <h3 class="product-title"><a href="product-detail.html?id=3">72V30Ah磷酸铁锂电池</a></h3>
+                                    <div class="product-specs">
+                                        <span class="spec">电压: 72V</span>
+                                        <span class="spec">容量: 30Ah</span>
+                                        <span class="spec">类型: 磷酸铁锂</span>
+                                    </div>
+                                    <div class="rating">
+                                        <i class="am-icon-star"></i>
+                                        <i class="am-icon-star"></i>
+                                        <i class="am-icon-star"></i>
+                                        <i class="am-icon-star"></i>
+                                        <i class="am-icon-star"></i>
+                                        <span class="rating-count">(42)</span>
+                                    </div>
+                                    <div class="product-meta">
+                                        <span class="sales">销量: 78</span>
+                                        <span class="stock">库存: 80</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price">¥2199</span>
+                                        <span class="original-price">¥2599</span>
+                                    </div>
+                                    <div class="product-buttons">
+                                        <button class="am-btn am-btn-primary add-to-cart" data-id="3">加入购物车</button>
+                                        <button class="am-btn am-btn-default buy-now" data-id="3">立即购买</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 产品项4 -->
+                            <div class="product-item" data-type="ternary" data-voltage="60v" data-capacity="25ah" data-price="1699">
+                                <div class="product-img">
+                                    <img src="web3.0-7.png" alt="60V25Ah三元锂电池" class="am-img-responsive">
+                                    <span class="promotion-tag">促销</span>
+                                    <div class="product-actions">
+                                        <button class="quick-view" data-id="4"><i class="am-icon-eye"></i> 快速预览</button>
+                                        <button class="add-to-compare" data-id="4"><i class="am-icon-exchange"></i> 对比</button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-category">三元锂电池</div>
+                                    <h3 class="product-title"><a href="product-detail.html?id=4">60V25Ah三元锂电池</a></h3>
+                                    <div class="product-specs">
+                                        <span class="spec">电压: 60V</span>
+                                        <span class="spec">容量: 25Ah</span>
+                                        <span class="spec">类型: 三元锂</span>
+                                    </div>
+                                    <div class="rating">
+                                        <i class="am-icon-star"></i>
+                                        <i class="am-icon-star"></i>
+                                        <i class="am-icon-star"></i>
+                                        <i class="am-icon-star"></i>
+                                        <i class="am-icon-star-o"></i>
+                                        <span class="rating-count">(67)</span>
+                                    </div>
+                                    <div class="product-meta">
+                                        <span class="sales">销量: 145</span>
+                                        <span class="stock">库存: 90</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price">¥1699</span>
+                                        <span class="original-price">¥1999</span>
+                                    </div>
+                                    <div class="product-buttons">
+                                        <button class="am-btn am-btn-primary add-to-cart" data-id="4">加入购物车</button>
+                                        <button class="am-btn am-btn-default buy-now" data-id="4">立即购买</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 产品项5 -->
+                            <div class="product-item" data-type="lithium" data-voltage="48v" data-capacity="20ah" data-price="999">
+                                <div class="product-img">
+                                    <img src="web3.0-10.png" alt="48V20Ah锂电池组" class="am-img-responsive">
+                                    <div class="product-actions">
+                                        <button class="quick-view" data-id="5"><i class="am-icon-eye"></i> 快速预览</button>
+                                        <button class="add-to-compare" data-id="5"><i class="am-icon-exchange"></i> 对比</button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-category">锂电池</div>
+                                    <h3 class="product-title"><a href="product-detail.html?id=5">48V20Ah锂电池组</a></h3>
+                                    <div class="product-specs">
+                                        <span class="spec">电压: 48V</span>
+                                        <span class="spec">容量: 20Ah</span>
+                                        <span class="spec">类型: 三元锂</span>
+                                    </div>
+                                    <div class="rating">
+                                        <i class="am-icon-star"></i>
+                                        <i class="am-icon-star"></i>
+                                        <i class="am-icon-star"></i>
+                                        <i class="am-icon-star-half-o"></i>
+                                        <i class="am-icon-star-o"></i>
+                                        <span class="rating-count">(89)</span>
+                                    </div>
+                                    <div class="product-meta">
+                                        <span class="sales">销量: 213</span>
+                                        <span class="stock">库存: 120</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price">¥999</span>
+                                        <span class="original-price">¥1299</span>
+                                    </div>
+                                    <div class="product-buttons">
+                                        <button class="am-btn am-btn-primary add-to-cart" data-id="5">加入购物车</button>
+                                        <button class="am-btn am-btn-default buy-now" data-id="5">立即购买</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 产品项6 -->
+                            <div class="product-item" data-type="lead-acid" data-voltage="60v" data-capacity="20ah" data-price="799">
+                                <div class="product-img">
+                                    <img src="web3.0-11.png" alt="60V20Ah铅酸电池" class="am-img-responsive">
+                                    <div class="product-actions">
+                                        <button class="quick-view" data-id="6"><i class="am-icon-eye"></i> 快速预览</button>
+                                        <button class="add-to-compare" data-id="6"><i class="am-icon-exchange"></i> 对比</button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-category">铅酸电池</div>
+                                    <h3 class="product-title"><a href="product-detail.html?id=6">60V20Ah铅酸电池</a></h3>
+                                    <div class="product-specs">
+                                        <span class="spec">电压: 60V</span>
+                                        <span class="spec">容量: 20Ah</span>
+                                        <span class="spec">类型: 铅酸</span>
+                                    </div>
+                                    <div class="rating">
+                                        <i class="am-icon-star"></i>
+                                        <i class="am-icon-star"></i>
+                                        <i class="am-icon-star"></i>
+                                        <i class="am-icon-star"></i>
+                                        <i class="am-icon-star-o"></i>
+                                        <span class="rating-count">(103)</span>
+                                    </div>
+                                    <div class="product-meta">
+                                        <span class="sales">销量: 178</span>
+                                        <span class="stock">库存: 130</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price">¥799</span>
+                                        <span class="original-price">¥999</span>
+                                    </div>
+                                    <div class="product-buttons">
+                                        <button class="am-btn am-btn-primary add-to-cart" data-id="6">加入购物车</button>
+                                        <button class="am-btn am-btn-default buy-now" data-id="6">立即购买</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 分页 -->
+                        <div class="pagination-wrapper">
+                            <div class="pagination-info">
+                                显示 <span>1</span>-<span>6</span> 条，共 <span>24</span> 条
+                            </div>
+                            <div class="am-pagination am-pagination-right">
+                                <li class="am-disabled"><a href="#">«</a></li>
+                                <li class="am-active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">»</a></li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="am-g">
+                <div class="am-u-sm-12 am-u-md-4">
+                    <div class="footer-logo"><img src="web3.0-20.png" alt="两（三）轮车电池web3.0交易平台" class="am-img-responsive"></div>
+                    <p class="footer-desc">两（三）轮车电池web3.0交易平台致力于为用户提供高品质的电池产品和专业的交易服务。</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="am-icon-weixin"></i></a>
+                        <a href="#" class="social-icon"><i class="am-icon-weibo"></i></a>
+                        <a href="#" class="social-icon"><i class="am-icon-qq"></i></a>
+                    </div>
+                </div>
+                <div class="am-u-sm-12 am-u-md-2">
+                    <h3 class="footer-title">快速链接</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="products.html">产品中心</a></li>
+                        <li><a href="services.html">服务保障</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="contact.html">联系方式</a></li>
+                    </ul>
+                </div>
+                <div class="am-u-sm-12 am-u-md-3">
+                    <h3 class="footer-title">服务支持</h3>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">常见问题</a></li>
+                        <li><a href="shipping.html">配送说明</a></li>
+                        <li><a href="return.html">退换政策</a></li>
+                        <li><a href="privacy.html">隐私政策</a></li>
+                        <li><a href="terms.html">服务条款</a></li>
+                    </ul>
+                </div>
+                <div class="am-u-sm-12 am-u-md-3">
+                    <h3 class="footer-title">联系我们</h3>
+                    <ul class="footer-contact">
+                        <li><i class="am-icon-phone"></i> 400-123-4567</li>
+                        <li><i class="am-icon-envelope"></i> contact@batteryweb3.com</li>
+                        <li><i class="am-icon-map-marker"></i> 北京市朝阳区科技园区88号</li>
+                        <li><i class="am-icon-clock-o"></i> 周一至周日 9:00-18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 两（三）轮车电池web3.0交易平台 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <div class="back-to-top" id="back-to-top">
+        <i class="am-icon-arrow-up"></i>
+    </div>
+
+    <!-- 产品对比模态框 -->
+    <div class="am-modal am-modal-no-btn" id="compare-modal">
+        <div class="am-modal-dialog">
+            <div class="am-modal-hd">
+                <h3>产品对比</h3>
+                <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+            </div>
+            <div class="am-modal-bd">
+                <div class="compare-content">
+                    <!-- 对比内容将通过JavaScript动态填充 -->
+                    <p class="no-compare">请选择要对比的产品</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入外部JavaScript库 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/amazeui@2.7.2/dist/js/amazeui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    
+    <!-- 引入自定义JavaScript -->
+    <script src="js/common.js?v=1.0"></script>
+    <script src="js/products.js?v=1.0"></script>
+</body>
+</html>

@@ -1,0 +1,486 @@
+/* 轮播图样式 */
+.banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    position: relative;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--color-main, #E22C08) !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #fff;
+    background-color: rgba(0,0,0,0.3);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: -20px;
+    border-radius: 50%;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 18px;
+}
+
+/* 平台优势样式 */
+.advantages {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.advantage-item {
+    text-align: center;
+    padding: 30px 20px;
+    transition: transform 0.3s ease;
+}
+
+.advantage-item:hover {
+    transform: translateY(-10px);
+}
+
+.advantage-icon {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    margin: 0 auto 20px;
+    background-color: var(--color-main-light, #ffe3de);
+    border-radius: 50%;
+    color: var(--color-main, #E22C08);
+    font-size: 32px;
+    transition: all 0.3s ease;
+}
+
+.advantage-item:hover .advantage-icon {
+    background-color: var(--color-main, #E22C08);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.advantage-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.advantage-desc {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* 热门产品样式 */
+.hot-products {
+    padding: 60px 0;
+    background-color: var(--body-bg-color, #f7f7f7);
+}
+
+/* 服务流程样式 */
+.service-process {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.process-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 auto 20px;
+    background-color: var(--color-main, #E22C08);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(226, 44, 8, 0.3);
+    transition: all 0.3s ease;
+}
+
+.step:hover .step-icon {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(226, 44, 8, 0.5);
+}
+
+.step-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.step-desc {
+    color: #666;
+    font-size: 14px;
+}
+
+.step-line {
+    position: absolute;
+    top: 30px;
+    left: 12%;
+    right: 12%;
+    height: 2px;
+    background-color: #e0e0e0;
+    z-index: 0;
+}
+
+/* 新闻动态样式 */
+.news {
+    padding: 60px 0;
+    background-color: var(--body-bg-color, #f7f7f7);
+}
+
+/* 响应式设计 */
+@media (max-width: 767px) {
+    .banner-img {
+        height: 250px;
+    }
+    
+    .advantages {
+        padding: 40px 0;
+    }
+    
+    .advantage-item {
+        margin-bottom: 30px;
+    }
+    
+    .advantage-item:last-child {
+        margin-bottom: 0;
+    }
+    
+    .hot-products,
+    .service-process,
+    .news {
+        padding: 40px 0;
+    }
+    
+    .process-steps {
+        flex-direction: column;
+    }
+    
+    .step {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+    
+    .step:last-child {
+        margin-bottom: 0;
+    }
+    
+    .step-line {
+        display: none;
+    }
+    
+    .step::before {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 20px;
+        background-color: #e0e0e0;
+    }
+    
+    .step:last-child::before {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .banner-img {
+        height: 350px;
+    }
+    
+    .advantage-item {
+        padding: 20px 10px;
+    }
+    
+    .advantage-icon {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .banner-img {
+        height: 400px;
+    }
+}
+
+/* 动画效果 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.section-title {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.advantage-item,
+.product-item,
+.news-item {
+    animation: fadeInUp 0.8s ease-out;
+    animation-fill-mode: both;
+}
+
+.advantage-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.advantage-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.advantage-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.product-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.product-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.product-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.product-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.news-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.news-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+/* 特殊状态样式 */
+.product-item:hover .add-to-cart {
+    animation: pulse 0.5s ease-in-out;
+}
+
+/* 加载更多按钮 */
+.load-more {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.load-more .am-btn {
+    padding: 10px 40px;
+    border-radius: var(--border-radius, 4px);
+}
+
+/* 移动端导航样式增强 */
+@media (max-width: 767px) {
+    .am-nav-collapse {
+        position: relative;
+    }
+    
+    .am-nav-horizontal {
+        margin: 0;
+    }
+    
+    .am-nav-horizontal > li {
+        display: block;
+        float: none;
+    }
+    
+    .am-nav-horizontal > li > a {
+        padding: 15px;
+        text-align: center;
+    }
+    
+    .am-dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+    }
+    
+    .am-dropdown-content > li > a {
+        padding-left: 40px;
+    }
+}
+
+/* 搜索框样式（未来扩展） */
+.search-box {
+    position: relative;
+    margin: 20px 0;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius, 4px);
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--color-main, #E22C08);
+}
+
+.search-btn {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.search-btn:hover {
+    color: var(--color-main, #E22C08);
+}
+
+/* 标签样式（未来扩展） */
+.tags {
+    margin: 20px 0;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tag:hover,
+.tag.active {
+    background-color: var(--color-main, #E22C08);
+    color: #fff;
+}
+
+/* 倒计时样式（未来促销活动使用） */
+.countdown {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.countdown-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.countdown-time {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: var(--color-main, #E22C08);
+    color: #fff;
+    border-radius: var(--border-radius-sm, 2px);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 5px;
+}
+
+/* 促销标签 */
+.promotion-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: var(--color-red, #E22C08);
+    color: #fff;
+    border-radius: var(--border-radius-sm, 2px);
+    font-size: 12px;
+    font-weight: 600;
+    z-index: 10;
+}
+
+/* 评分样式 */
+.rating {
+    color: var(--color-yellow, #FAAD14);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.rating .am-icon-star-o {
+    color: #ddd;
+}
+
+/* 销量和评价数 */
+.product-meta {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.product-meta span {
+    margin-right: 15px;
+}
