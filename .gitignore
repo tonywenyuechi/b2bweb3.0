@@ -1,0 +1,30 @@
+# Dependencies
+vendor/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+
+# Cache
+cache/
+runtime/
+
+# Build
+*.sql
+*.tar.gz
+*.zip
+
+# OS
+.DS_Store
+Thumbs.db
